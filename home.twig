@@ -2,106 +2,23 @@
 
 {% block content %}
 
-<!-- Signup / Login Overlay -->
-{% include "includes/form-overlay.twig" %}
+<!-- Developer Signup Overlay -->
+<div id="developer-signup" class="dev-overlay">
 
-<!-- Sidebar Pullout Menu -->
-{% include "includes/sidebar-pullout.twig" %}
+	<div class="dev-overlay-container">
 
-<!-- Page Content -->
-<section id="page-content" class="page-content">
-
-	<section class="top-section">
-
-		<div class="container">
-
-			<!-- Theme Header -->
-			{% include "includes/header.twig" %}
-
-			<!-- Page Intro -->
-			<div class="page-intro">
-
-				<div class="container">
-
-					{{widget('content', 'page-intro_title', {"content":'<h1>Let&#39;s Build Better. Together</h1><p>The BaseKit Developer Portal: Your space to learn, work and play alongside fellow developers.</p>'})|raw}}
-
-				</div>
-
+		<div class="dev-signup-form">
+			<div class="dev-signup-title">
+				<img src="{{asset('images/logo-icon.png')}}" class="logo-icon">
+				{{widget('content', 'sidebarcontent', {content: '<h2>Lorem ipsum dolor sit amet...</h2>'})|raw}}
 			</div>
-
+			<!-- <a href="#close" class="icon  icon--close"></a> -->
+			{{widget('userregistration','userregistration',{})|raw}}
+			<p class="dev-signup-text">Have an account? <a href="http://login.basekit.website">Login</a> here.</p>
 		</div>
 
-	</section>
-	<!-- End Top Section -->
+	</div>
 
-	<!-- Feature Blocks -->
-	<section role="main" class="feature-blocks">
-
-		<!-- Documentation -->
-		<article class="feature-item  bg-color--blue  graphic  graphic--clouds">
-
-			{{widget('content', 'feature-item_documentation_title', {"content":'<h2>Documentation</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_documentation_description', {"content":'<p>Tips, tricks and FAQs to support your development needs.</p>'})|raw}}
-			<a href="http://docs.basekit.com" target="_blank" class="button  white  button--blue">View docs</a>
-			<a href="/faqs" target="" class="button  white  button--blue">View FAQs</a>
-
-		</article>
-
-		<!-- Developer Sign Up -->
-		<article class="feature-item  bg-color--green  graphic  graphic--code">
-
-			{{widget('content', 'feature-item_dev-signup_title', {"content":'<h2>Developer Sign Up</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_dev-signup_description', {"content":'<p>Sign up, set up then swiftly start building your site. Simple.</p>'})|raw}}
-			<a href="#developer-signup" class="button  white  button--green">Create an account</a>
-
-		</article>
-
-		<!-- Editor Tour -->
-		<article class="feature-item  bg-color--orange  graphic  graphic--ed-tour">
-
-			{{widget('content', 'feature-item_editor-tour_title', {"content":'<h2>Editor Tour</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_editor-tour_description', {"content":'<p>An overview of BaseKit’s Editor in all of its site building glory.</p>'})|raw}}
-			<a href="http://www.basekit.com/tour" target="_blank" class="button  white  button--orange">Take the editor tour</a>
-
-		</article>
-
-		<!-- Knowledge Forum -->
-		<article class="feature-item  bg-color--blue  graphic  graphic--knowledge">
-
-			{{widget('content', 'feature-item_knowledge_title', {"content":'<h2>Knowledge Forum</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_knowledge_description', {"content":'<p>This is the fancy name we give to our discussion and help forum.</p>'})|raw}}
-			<a href="http://knowledge.basekit.com" target="_blank" class="button  white  button--blue">View knowledge forum</a>
-
-		</article>
-
-		<!-- Developer Blog -->
-		<article class="feature-item  bg-color--green  graphic  graphic--dev-blog">
-
-			{{widget('content', 'feature-item_dev-blog_title', {"content":'<h2>Developer Blog</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_dev-blog_description', {"content":'<p>Informative, useful and inspirational articles only, we promise.</p>'})|raw}}
-			<a href="/blog" class="button  white  button--green">View the developer blog</a>
-
-		</article>
-
-		<!-- Theme Viewer Tour -->
-		<article class="feature-item  bg-color--orange  graphic  graphic--tv-tour">
-
-			{{widget('content', 'feature-item_theme-viewer_title', {"content":'<h2>Theme Viewer Tour</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_theme-viewer_description', {"content":'<p>View your code changes locally without uploading, downloading, toing and froing.</p>'})|raw}}
-			<a href="http://docs.basekit.com/getting-started/downloading/" target="_blank" class="button  white  button--orange">Take the theme viewer tour</a>
-
-		</article>
-
-	</section>
-	<!-- End Feature Blocks -->
-
-</section>
-<!-- End Page Content -->
+</div>
 
 {% endblock %}
